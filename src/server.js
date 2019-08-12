@@ -3,12 +3,12 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 
 mongoose.connect(
-    'mongodb+srv://omnistack:omnistack@cluster0-jxhrd.mongodb.net/omnistack8?retryWrites=true&w=majority',
-    { useNewUrlParser: true })
+    'URL_MONGODB',
+    { useNewUrlParser: true, useCreateIndex: true })
     .then(res => {
         const { name } = res.connection
-        console.log('Mongo conectado com sucesso', name)
-    }, err => console.log('Erro ao se conectar com o mongodb: ', err))
+        console.log('[Mongoose] Connected to the database', name)
+    }, err => console.log('[Mongoose] Error connecting to database', err))
 
 const routes = require('./routes')
 
