@@ -31,6 +31,6 @@ https://github.com/nodesource/distributions/blob/master/README.md
 - `yarn add axios` (ferramenta para auxiliar no busca de informações de outras api's)
 - `yarn add cors` (ferramenta para outra aplicações consigam pegar informações dessa api, entre outras configurações)
 - `yarn add socket.io` (websocket, adiciona um wrap em cima do socket do express... utilizado pra fazer integração de dados em tempo real, como verificar se deu match entre duas pessoas no tinder)
-    - No lado do cliente: yarn add socket.io-client
+    - No lado do cliente: `yarn add socket.io-client`
         - No main.js: `import socket.io-client` e cria uma função que se conecta com o socket passando o ip do backend, exemplo: `const socket = io('localhost:3333', { query: { user: match.params.id} });`...
         `socket.on('match', dev => { console.log(dev) })`
